@@ -7,15 +7,15 @@ $uri = $_SERVER['REQUEST_URI'];
 
 switch($uri){
     case $folder.'/':
-        require 'controllers/i.php';
+        require 'Controllers/i.php';
         break;
     
     case $folder.'/about':
-        require 'controllers/about.php';
+        require 'Controllers/about.php';
         break;
  
     case $folder.'/contact':
-        require 'controllers/contact.php';
+        require 'Controllers/contact.php';
         break;
 }
 
