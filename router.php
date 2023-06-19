@@ -8,15 +8,15 @@ $routes = [
     $folder.'/contact' => 'Controllers/contact.php'
 ];
 
-
-
 function abort($code = 404){
+    global $folder;
     http_response_code($code);
     require "views/${code}.php";
     die();
 }
 
 function routeToController($uri, $routes){
+    global $folder;
     if(array_key_exists($uri, $routes)){
         require $routes[$uri];
     }
